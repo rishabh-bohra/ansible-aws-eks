@@ -36,4 +36,5 @@ To edit any variable for this repository use "variable" file its the master vari
 
 To run this repository use command 
 
-$ ansible-playbook launch.yml
+ ```ansible-playbook launch.yml
+```
