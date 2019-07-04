@@ -31,6 +31,8 @@ Prerequesites for this repository is
 
 - ansible-version 2.7+
 
+To edit any variable for this repository use "variable" file its the master variable file for this Project
+
 
 To run this repository use command 
 
