@@ -1,0 +1,10 @@
+- hosts: localhost
+  roles:
+  - aws-key
+  - aws-iam-role
+  - aws-vpc
+  - aws-vpc-subnet
+  - aws-igw
+  - aws-route-table
+  - aws-security-group
+  - aws-eks-cluster

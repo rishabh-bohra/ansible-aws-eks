@@ -1,0 +1,13 @@
+- hosts: localhost
+  tasks:  
+  - include_vars: "file=variables.yml"
+
+  roles:
+     - roles/aws-key
+     - roles/aws-iam-role
+     - roles/aws-vpc
+     - roles/aws-vpc-subnet
+     - roles/aws-igw
+     - roles/aws-route-table
+     - roles/aws-security-group
+     - roles/aws-eks-cluster 

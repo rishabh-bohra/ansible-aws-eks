@@ -1,0 +1,12 @@
+eks_region: ap-south-1
+
+eks_cluster_name: kube2019rishabh
+
+eks_subnets:
+  - cidr: 10.0.1.0/24
+    zone: a
+  - cidr: 10.0.2.0/24
+    zone: b
+  - cidr: 10.0.3.0/24
+    zone: c
+

@@ -1,0 +1,7 @@
+- name: ensure VPC exists
+  ec2_vpc_net:
+    name: "{{ eks_vpc_name }}"
+    cidr_block: "{{ eks_vpc_cidr }}"
+    region: "{{ eks_region }}"
+  register: eks_vpc_results
+

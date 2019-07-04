@@ -1,0 +1,3 @@
+eks_key_name: kube-key
+region: ap-south-1
+destination: /home/ansible/aws-eks/aws-key/files/kube-key.pem

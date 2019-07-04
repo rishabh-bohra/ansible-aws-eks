@@ -1,0 +1,7 @@
+- name: ensure igw exists
+  ec2_vpc_igw:
+    vpc_id: "{{ eks_vpc_results.vpc.id }}"
+    region: "{{ eks_region }}"
+    state: present
+  register: eks_vpc_igw
+

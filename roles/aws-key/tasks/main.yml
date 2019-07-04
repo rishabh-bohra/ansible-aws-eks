@@ -1,0 +1,13 @@
+
+- name: Create a new EC2 key
+  ec2_key:
+      name: "{{ eks_key_name }}"
+      region: "{{ region }}"
+  register: ec2_key_result
+
+- name: Save private key
+  copy:
+      content: "{{ ec2_key_result }}"
+      dest: "{{ destination }}" 
+      mode: 0600
+

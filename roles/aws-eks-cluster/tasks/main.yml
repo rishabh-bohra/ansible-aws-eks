@@ -1,0 +1,13 @@
+
+
+
+- name: create eks cluster
+  aws_eks_cluster:
+    name: "{{ eks_cluster_name }}"
+    state: present
+    security_groups: "{{ eks_security_groups | json_query('[].name') }}"
+    subnets: "{{ eks_subnet_results.results | json_query('[].subnet.id') }}"
+    role_arn: "{{ eks_cluster_iam_role.arn }}"
+    region: "{{ eks_region }}"
+    wait: yes
+  register: eks_create

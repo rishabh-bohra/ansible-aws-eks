@@ -1,0 +1,4 @@
+eks_cluster_role_name: kube_role
+policy_arn1: arn:aws:iam::aws:policy/AmazonEKSServicePolicy
+policy_arn2: arn:aws:iam::aws:policy/AmazonEKSClusterPolicy
+eks_worker_role_name: eksWorkerRole

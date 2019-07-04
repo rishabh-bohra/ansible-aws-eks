@@ -1,0 +1,11 @@
+- name: create public route table
+  ec2_vpc_route_table:
+    vpc_id: "{{ eks_vpc_results.vpc.id }}"
+    region: "{{ eks_region }}"
+    tags:
+      Name: Public
+    subnets: "{{ eks_subnet_results.results | json_query('[].subnet.id') }}"
+    routes:
+      - dest: 0.0.0.0/0
+        gateway_id: "{{ eks_vpc_igw.gateway_id }}"
+

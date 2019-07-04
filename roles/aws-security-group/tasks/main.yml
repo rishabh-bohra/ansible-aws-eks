@@ -1,0 +1,15 @@
+- name: ensure security groups exist
+  ec2_group:
+    name: "{{ item.name }}"
+    description: "{{ item.description }}"
+    state: present
+    rules: "{{ item.rules }}"
+    rules_egress: "{{ item.rules_egress|default(omit) }}"
+    vpc_id: '{{ eks_vpc_results.vpc.id }}'
+    region: "{{ eks_region }}"
+    tags: "{{ item.tags | default({}) }}"
+    purge_tags: no
+    purge_rules: no
+    purge_rules_egress: no
+  with_items: "{{ eks_security_groups }}"
+  register: eks_security_group_results
