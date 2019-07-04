@@ -1,6 +1,6 @@
 - hosts: localhost
   tasks:  
-  - include_vars: "file=variables.yml"
+  - include_vars: "file=variables"
 
   roles:
      - roles/aws-key
