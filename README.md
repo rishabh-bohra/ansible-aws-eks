@@ -17,7 +17,7 @@ This repository contain roles for creating ansible eks cluster and all its prere
 
 - security group
 
-Prerequesites for this repository is 
+Prerequesites for this repository are
 
 - Python 2.6+
 
