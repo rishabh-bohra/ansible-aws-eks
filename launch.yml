@@ -1,7 +1,8 @@
 - hosts: localhost
-  tasks:  
-  - include_vars: "file=variables"
-
+  #tasks:  
+  #- include_vars: "file=variables"
+  vars_files:
+  - "./variables"
   roles:
      - roles/aws-key
      - roles/aws-iam-role
